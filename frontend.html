@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restor</title>
+    <link rel="icon" href="https://th.bing.com/th/id/R.29453ba69c1c57dd74be24dcb6e41ab2?rik=TuqKOrNm9ejKKA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f7%2fRestore-PNG-Photos.png&ehk=yvRy%2bgKq%2b8y5wwtRE1FYe12bNsE%2fiOorkFx0KJxE9nM%3d&risl=&pid=ImgRaw&r=0" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo border">Restor</div>
+            <div class="nav-address border"></div>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="india-b">India</p> 
+                </div>
+                
+    
+            <div class="location-select">
+                <select>
+                    <option value="location1">Mumbai</option>
+                    <option value="location2">Banglore</option>
+                    <option value="location3">Gurugram</option>
+                    <option value="location4">Delhi</option>
+                    <option value="location4">Jaipur</option>
+                    <option value="location4">Chandigarh</option>
+                    <option value="location4">kerala</option>
+                    <option value="location4">Haryana</option>
+                </select>
+            </div>
+            <div class="search-bar">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Search for items..." class="search-item" />
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>        
+                <!--<button type="button">Search</button>-->
+
+                <div class="lang-sec">
+                   <select id="language-selector" onchange="changeLanguage()">
+                       <option value="en">English</option>
+                       <option value="es">Hindi</option>
+                       <option value="fr">Tamil</option>
+                   </select>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Post Ad</a></li>
+                    <!-- Login button to trigger popup -->
+                    <li> <button class="login-btn" id="loginBtn"><a href="">Login</a></button>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+     <!-- Popup Login Form -->
+    <div id="login-popup" class="login-popup">
+        <div class="popup-content">
+            <span id="close-login-popup" class="close-popup">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="login-actions">
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" id="open-signup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- Popup Sign-Up Form -->
+<div id="signup-popup" class="login-popup" style="display: none;">
+    <div class="popup-content">
+        <span id="close-signup-popup" class="close-popup">&times;</span>
+        <h2>Create Your Account</h2>
+        <form id="signup-form">
+            <div class="input-field">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-field">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-field">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <div class="signup-actions">
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="open-login">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- New Header Section --><!-- New Header Section -->
+<header class="secondary-header">
+    <nav class="secondary-navbar">
+        <ul class="secondary-nav-links">
+            <li class="mega-menu">
+                <button id="all-category-toggle">
+                    All Categories
+                    <span class="dropdown-icon">▼</span>
+                </button>
+                <div id="all-category-dropdown" class="mega-menu-content">
+                    <div class="categories-container">
+                        <ul class="mega-menu">
+                            <h3 >Bikes</h3>
+                            <li>Motorcycles</li>
+                            <li>Scooters</li>
+                            <li>Spare Parts</li>
+                            <li>Bicycles</li>
+                        </ul>
+                        <ul>
+                            <h3 >Properties</h3>
+                            <li>For Sale: House & Apartments</li>
+                            <li>For Rent: House & Apartments</li>
+                            <li>Lands & Plots</li>
+                            <li>For Rent: Shops & Offices</li>
+                            <li>For Sale: Shops & Offices</li>
+                            <li>PG & Guest Houses</li>
+                        </ul>
+                        <ul>
+                            <h3>Electronics & Appliances</h3>
+                            <li>TVs, Video-Audio</li>
+                            <li>Kitchen & Other Appliances</li>
+                            <li>Computers & Laptops</li>
+                            <li>Cameras & Lenses</li>
+                            <li>Games & Entertainment</li>
+                            <li>Fridges</li>
+                            <li>Computer Accessories</li>
+                            <li>Hard Disks, Printer & Monitors</li>
+                            <li>ACs</li>
+                            <li>Washing Machines</li>
+                        </ul>
+                        <ul>
+                            <h3>Mobiles</h3>
+                            <li>Mobile Phones</li>
+                            <li>Accessories</li>
+                            <li>Tablets</li>
+                        </ul>
+                        <!-- Add more categories in the same format -->
+                         <ul>
+                            <h3>Commercial Vehicles & Spares</h3>
+                            <li>Commercial & Other Vehicles</li>
+                            <li>Spare Parts</li>
+                         </ul>
+                         <ul>
+                            <h3>Jobs</h3>
+                            <li>Data entry & Back Office</li>
+                            <li>Sales & Marketing</li>
+                            <li>BPO & Telecaller</li>
+                            <li>Driver</li>
+                            <li>Office Assitant</li>
+                            <li>Delivery & Collection</li>
+                            <li>Teacher</li>
+                            <li>Cook</li>
+                            <li>Receptionist & Front Offices</li>
+                            <li>Operator & Technician</li>
+                            <li>IT Engineer & Developers</li>
+                            <li>Hotel & Travel Executive</li>
+                            <li>Accountant</li>
+                            <li>Designer</li>
+                            <li>Other Jobs</li>
+                        </ul>
+                        <ul>
+                            <h3>Furniture</h3>
+                            <li>Sofa & Dining</li>
+                            <li>Beds & Wardrobes</li>
+                            <li>Home Decor & Garden</li>
+                            <li>Kids Furniture</li>
+                            <li>Other Household Items</li>
+                        </ul>
+                        <ul>
+                            <h3>Fashion</h3>
+                            <li>Men</li>
+                            <li>Women</li>
+                            <li>Kids</li>
+                        <ul>
+                            <h3>Pets</h3>
+                            <li>Fishes & Aquarium</li>
+                            <li>Pet Food & Accessories</li>
+                            <li>Dogs</li>
+                            <li>Other Pets</li>
+                        </ul>
+                        <ul>
+                            <h3>Books, Sports & Hobbies</h3>
+                            <li>Books</li>
+                            <li>Gym & Fitness</li>
+                            <li>Musical Instruments</li>
+                            <li>Sports Equipment</li>
+                            <li>Other Hobbies</li>
+                        </ul>
+                        <ul>
+                            <h3>Services</h3>
+                            <li>Eduation & Classes</li>
+                            <li>Tour & Travels</li>
+                            <li>Electronics Repair & Services</li>
+                            <li>Health & Beauty</li>
+                            <li>Home Renovation & Repair</li>
+                            <li>Cleaning & Pest Control</li>
+                            <li>Legal & Documentation Services</li>
+                            <li>Packers & Movers</li>
+                            <li>Other Services</li>
+                        </ul>
+                    </div>
+                </div>
+                <li><a href="#">Car</a></li>
+                <li><a href="#">Motorcycle</a></li>
+                <li><a href="#">Mobile Phones</a></li>
+                <li><a href="#">For Sale: House & Apartments</a></li>
+                <li><a href="#">For Rent: House & Apartments</a></li>
+                <li><a href="#">Commercial and other Vehicle</a></li>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Popup Login Form 
+    <div id="login-popup" class="login-popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-popup">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="login-actions">
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>   -->
+
+   <!-- <ul class="nav-links">
+        <li><a href="#">Post Ad</a></li>
+         Login button to trigger popup
+        <li><button id="login-btn">Login</button></li>
+    </ul> -->
+
+    <!-- Link to JavaScript File -->
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to AJbargain</h1>
+            <p>Buy, sell, and trade anything easily and locally.</p>
+            <button class="cta-button">Start Bargaining Now</button>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Listings</h2>
+            <div class="listing-grid">
+                <div class="card">
+                    <img src="placeholder.jpg" alt="Item Image">
+                    <h3>Smartphone</h3>
+                    <p>$300</p>
+                </div>
+                <div class="card">
+                    <img src="placeholder.jpg" alt="Item Image">
+                    <h3>Gaming Console</h3>
+                    <p>$250</p>
+                </div>
+                <div class="card">
+                    <img src="placeholder.jpg" alt="Item Image">
+                    <h3>Headphones</h3>
+                    <p>$80</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2024 AJbargain. All Rights Reserved.</p>
+            </div>
+            <div class="footer-center">
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/M%C3%A9%C3%ABt-S%C3%A1yy%C3%A9d-%C3%81rb%C3%A4z/pfbid0d21ENEGcKXnwA3rbTeCLE1coBK2Vd2ijDUZkcoJ8rjRW8ZLNaYCRdwszMT4MTns8l/?mibextid=ZbWKwL"
+                        class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <img src="fb.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/g1_pencil_art/profilecard/?igsh=dzd2dWtodTA2NW9v"
+                        class="social-icon" target="_blank" rel="noopener noreferrer"><img src="tw.png"
+                            alt="Twitter"></a>
+                    <a href="https://www.instagram.com/g1_pencil_art/profilecard/?igsh=dzd2dWtodTA2NW9v"
+                        class="social-icon" target="_blank" rel="noopener noreferrer"><img src="inst.png"
+                            alt="Instagram"></a>
+                </div>
+                <div class="newsletter">
+                    <input type="email" placeholder="Enter your email" id="newsletter-email">
+                    <button type="button" id="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

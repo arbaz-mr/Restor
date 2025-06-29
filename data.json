@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
+
+
+[
+    {
+        "id": 1,
+        "name": "iPhone 13",
+        "price": "₹65,000",
+        "image": "images/sample-product.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Honda Bike",
+        "price": "₹85,000",
+        "image": "images/sample-product.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Laptop",
+        "price": "₹50,000",
+        "image": "images/sample-product.jpg"
+    }
+]
